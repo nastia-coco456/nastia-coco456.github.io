@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Темы для дизайна сайта</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="box">
+		<h1>МОИ ТЕМЫ ДЛЯ ДИЗАЙНА САЙТА</h1>
+		<div class="flex">
+			<div class="flex-item">
+				<p class="text">Темная тема</p>
+				<div class="push">
+					Применить
+				</div>
+			</div>
+			<div class="flex-item">
+				<p class="text">Светлая тема</p>
+				<div class="push">
+					Применить
+				</div>
+			</div>
+			<div class="flex-item">
+				<p class="text">Цветная тема</p>
+				<div class="push">
+					Применить
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		let h1 = document.querySelector("h1");
+		let body = document.querySelector("body");
+		let button = document.querySelectorAll(".push");
+		let p = document.querySelectorAll(".text");
+
+		let arr1 = ["linear-gradient(to right top, #0a1525, #0d1622, #10171f, #14181c, #171819)", "linear-gradient(to left top, #ffffff, #f6faff, #e4f6ff, #ccf5ff, #b3f4ff)", "linear-gradient(to bottom, #fff188, #e4f79a, #cdfbb0, #bcfcc6, #b2fcda)"];
+		let arr2 = ["white", "#1D2149", "#3A6139"];
+		let arr = ["#222A4A", "white", "#B4FFF5"];
+		let arr3 = ["white","black","black"];
+		let arr4 = ["#222A4A","white","white"];
+		let arr5 = ["white","#00A8FF","#FFA5C9"];
+
+		button.forEach(function(item,index){
+			item.addEventListener("click", function(){
+				h1.style.color = arr2[index];
+				body.style.background = arr1[index];
+
+				for(let items of p){
+					items.style.background = arr[index];
+					items.style.color = arr3[index];
+				}
+				for(let items of button){
+					items.style.background = arr5[index];
+					items.style.color = arr4[index];
+				}
+			})
+		})
+	</script>
+</body>
+</html>
